@@ -21,3 +21,17 @@ Array.from(metricCards).forEach(card =>{
     card.innerHTML += " - Refreshed";
     card.style.backgroundColor = "lime";
 });
+
+// Task 3: Implemented Dynamic Inventory List
+function addItem(productName) {
+    const inventoryList = document.getElementById("inventoryList");
+    const listItem = document.createElement("li");
+    listItem.setAttribute("class", "product-item");
+    listItem.setAttribute("data-product", productName);
+    listItem.textContent = productName;
+
+    listItem.addEventListener("click", () =>{
+        inventoryList.removeChild(listItem);
+    });
+    inventoryList.appendChild(listItem);
+};
