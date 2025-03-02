@@ -23,7 +23,7 @@ Array.from(metricCards).forEach(card =>{
 });
 
 // Task 3: Implemented Dynamic Inventory List
-function addItem(productName) {
+function addInventoryItem(productName) {
     const inventoryList = document.getElementById("inventoryList");
     const listItem = document.createElement("li");
     listItem.setAttribute("class", "product-item");
