@@ -13,3 +13,11 @@ revenueCard.innerHTML = `
 `;
 
 dashboardId.appendChild(revenueCard);
+
+// Task 2: Updated Metric Cards via Array Conversion
+const metricCards = document.querySelectorAll(".metric-card");
+
+Array.from(metricCards).forEach(card =>{
+    card.innerHTML += " - Refreshed";
+    card.style.backgroundColor = "lime";
+});
