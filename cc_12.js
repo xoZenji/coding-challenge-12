@@ -35,3 +35,18 @@ function addInventoryItem(productName) {
     });
     inventoryList.appendChild(listItem);
 };
+
+// Task 4: Demonstrated Event Bubbling in Customer Section
+const customerSection = document.getElementById("customerSection");
+customerSection.addEventListener("click", () => {
+  console.log("Customer section has been clicked");
+}); // Logs "Customer section has been clicked" to the console when the customer section is clicked
+
+const customerCards = document.querySelectorAll(".customer-card");
+customerCards.forEach((card) => {
+  card.style.backgroundColor = "orange";
+  card.addEventListener("click", (event) => {
+    console.log("Customer card has been clicked");
+    event.stopPropagation();
+  }); // Logs "Customer card has been clicked" to the console when a customer card is clicked
+});
